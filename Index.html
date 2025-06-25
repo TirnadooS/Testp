@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #c62828;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #d32f2f;
+            border-bottom: 2px solid #ef9a9a;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        .menu-section {
+            margin-bottom: 40px;
+        }
+        .menu-item {
+            margin-bottom: 15px;
+        }
+        .item-name {
+            font-weight: bold;
+        }
+        .item-price {
+            float: right;
+        }
+        .item-description {
+            font-style: italic;
+            color: #666;
+            margin-left: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .allergens {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        .note {
+            font-size: 0.8em;
+            color: #888;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Restaurant Menu</h1>
+
+    <div class="menu-section">
+        <h1>Meny-Kebab</h1>
+
+        <h2>KEBAB</h2>
+        <div class="menu-item">
+            <span class="item-name">Kebabrull med Biffkjött (M-E)</span>
+            <span class="item-price">235 kr</span>
+            <div class="item-description">Kinakål, tomat, rodlak, mais, chilisaus, dressing</div>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Kebabrull med Kyllingfilet (M-E)</span>
+            <span class="item-price">220 kr</span>
+            <div class="item-description">Kinakål, tomat, rodlak, mais, chilisaus, dressing</div>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Kebabtallerken med Biffkjött (M-E)</span>
+            <span class="item-price">250 kr</span>
+            <div class="item-description">Kinakål, tomat, rodlak, mais, chilisaus, dressing, pommes frites</div>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Kebabtallerken med Kylling (M-E)</span>
+            <span class="item-price">235 kr</span>
+            <div class="item-description">Kinakål, tomat, rodlak, mais, chilisaus, dressing, pommes frites</div>
+        </div>
+
+        <h2>HAMBURGER</h2>
+        <table>
+            <tr>
+                <th></th>
+                <th>Liten (100g)</th>
+                <th>Stor (200g)</th>
+            </tr>
+            <tr>
+                <td>ORGINAL</td>
+                <td>170 kr</td>
+                <td>200 kr</td>
+            </tr>
+            <tr>
+                <td>OST/BACON</td>
+                <td>189 kr</td>
+                <td>230 kr</td>
+            </tr>
+            <tr>
+                <td>TACOBURGER</td>
+                <td>190 kr</td>
+                <td>230 kr</td>
+            </tr>
+            <tr>
+                <td>DOBBELBURGER</td>
+                <td>250 kr</td>
+                <td>330 kr</td>
+            </tr>
+            <tr>
+                <td>HVITLØKSBURGER</td>
+                <td>170 kr</td>
+                <td>190 kr</td>
+            </tr>
+            <tr>
+                <td>LØVSTEKBURGER</td>
+                <td>180 kr</td>
+                <td>210 kr</td>
+            </tr>
+        </table>
+
+        <h3>BARNEMENY</h3>
+        <div class="menu-item">
+            <span class="item-name">HAMBURGER</span>
+            <span class="item-price">89 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">POLSE M/POMMES FRITES</span>
+            <span class="item-price">75 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">KYLLINGNUGGETS M/POMMES FRITES</span>
+            <span class="item-price">99 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">POMMES FRITES</span>
+            <span class="item-price">45 kr</span>
+        </div>
+
+        <h3>DESSERT</h3>
+        <div class="menu-item">
+            <span class="item-name">Owstekake</span>
+            <span class="item-price">80 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Brownies</span>
+            <span class="item-price">80 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Jordberkake</span>
+            <span class="item-price">80 kr</span>
+        </div>
+
+        <h2>SNAKS</h2>
+        <div class="menu-item">
+            <span class="item-name">Nuggets (5 stk)</span>
+            <span class="item-price">75 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Lakringer (5 stk)</span>
+            <span class="item-price">65 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Mozzarella (5 stk)</span>
+            <span class="item-price">65 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Chili Cheese (5 stk)</span>
+            <span class="item-price">65 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Chilimatter</span>
+            <span class="item-price">60 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Nachos m/ Dip</span>
+            <span class="item-price">60 kr</span>
+        </div>
+
+        <h2>VARM DRIKKE</h2>
+        <div class="menu-item">
+            <span class="item-name">Cappuccino</span>
+            <span class="item-price">45 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Kaffe Latte</span>
+            <span class="item-price">45 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Americano</span>
+            <span class="item-price">45 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Te</span>
+            <span class="item-price">35 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Marrokansk Te/Mynte</span>
+            <span class="item-price">45 kr</span>
+        </div>
+
+        <h2>KALD DRIKKE</h2>
+        <div class="menu-item">
+            <span class="item-name">Cola / Cola Zero</span>
+            <span class="item-price">49 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Fanta / Fanta Zero</span>
+            <span class="item-price">49 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Sprite / Sprite Zero</span>
+            <span class="item-price">49 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Farris</span>
+            <span class="item-price">49 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Urge</span>
+            <span class="item-price">49 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Monster</span>
+            <span class="item-price">49 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Isté</span>
+            <span class="item-price">49 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Kuli</span>
+            <span class="item-price">25 kr</span>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h1>Meny-Sushi</h1>
+
+        <h2>Nigiri (2 biter)</h2>
+        <div class="menu-item">
+            <span class="item-name">1. Laks Nigiri</span>
+            <span class="item-price">45 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">2. Ebi Nigiri</span>
+            <span class="item-price">45 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">3. Flambert Laks Nigiri (H, SK, M, E, G)</span>
+            <span class="item-price">55 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">4. Tempura Scampi Nigiri - 3 biter (F, SO, E, M)</span>
+            <span class="item-price">130 kr</span>
+        </div>
+
+        <h2>Sashimi</h2>
+        <div class="menu-item">
+            <span class="item-name">5. Skinny Sashimi - 6 biter (F)</span>
+            <span class="item-price">160 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">6. New Sashimi - 6 biter (F, SO, SE)</span>
+            <span class="item-price">170 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">7. Japanese Sashimi Stor - 12 biter (F, SO)</span>
+            <span class="item-price">220 kr</span>
+        </div>
+
+        <h2>Gunkan</h2>
+        <div class="menu-item">
+            <span class="item-name">8. Med Tartar og ris</span>
+            <span class="item-price">60 kr</span>
+        </div>
+
+        <h2>Maki Rull 8 PS</h2>
+        <div class="menu-item">
+            <span class="item-name">9. Sakura Rull (Laks, agurk) (F)</span>
+            <span class="item-price">159 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">10. Red Rull (Laks, agurk, rod tobiko) (F, M, G)</span>
+            <span class="item-price">169 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">11. Mango Rull (Laks, mango, kremost, jordbar, sesam, søt soyasaus) (F, M, S, G, SO, SE)</span>
+            <span class="item-price">169 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">12. California Rull (Krabbestang, masago, kremost, agurk) (M, G, SO, SK)</span>
+            <span class="item-price">159 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">13. Tempura Rull (Fritert scampi, avocado) (SK, M, G, SF)</span>
+            <span class="item-price">169 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">14. Flambert Crab Rull (Krabbestang, laks, chilimajones, teriyakisaus, vårlak) (SK, F, G, SO, M, SE)</span>
+            <span class="item-price">169 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">15. Crunchy Tempura Rull (Scampi, avocado, crunchy, chilimajones) (SK, G, M, SE, E)</span>
+            <span class="item-price">159 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">16. Dragon Rull (Fritert scampi, avocado, tobiko, teriyakisaus) (SE, G, M, H)</span>
+            <span class="item-price">169 kr</span>
+        </div>
+
+        <h2>Partyboks</h2>
+        <div class="menu-item">
+            <span class="item-name">Familie Combo - 60 biter (H, SO, SK, G, M, B, F, SE, E)</span>
+            <span class="item-price">850 kr</span>
+            <div class="item-description">10 laks nigiri, 10 flambert laks nigiri, 8 Mango Rull, 8 Red Rull, 8 Tempura Maki, 8 Hot Sakura fritert, 8 California Rull fritert</div>
+        </div>
+
+        <h2>Spesial Maki - Fritert 8 PS</h2>
+        <div class="menu-item">
+            <span class="item-name">17. Sakura Maki (Fritert laks, agurk, avocado) (F, M, G, B)</span>
+            <span class="item-price">159 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">18. Hot Sakura (Fritert laks, mango, kremost, sesam, vårlak) (F, M, G, SE, SO, B)</span>
+            <span class="item-price">169 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">19. California Fritert (Krabbestang, kremost, masago) (M, G, E, B)</span>
+            <span class="item-price">159 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">20. Chris Rock Rull (Tempura scampi, avocado, laks, teriyakisaus, chilimajones) (F, M, G, SO, SK, B)</span>
+            <span class="item-price">169 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">21. Mix Maki (Laks, fritert scampi, jordbar, teriyakisaus, vårlak, sesam)</span>
+            <span class="item-price">169 kr</span>
+        </div>
+
+        <h2>Combo</h2>
+        <div class="menu-item">
+            <span class="item-name">22. Combo Nigiri - 8 biter (F, SO, E, SK, M)</span>
+            <span class="item-price">179 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">23. Combo Mix - 12 biter (E, G, SO, M, SE)</span>
+            <span class="item-price">239 kr</span>
+            <div class="item-description">4 nigiri, 4 sashimi, 4 maki Red Rull</div>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">24. Combo - 12 biter (H, SO, SK, M, G, E, F, SE, B)</span>
+            <span class="item-price">239 kr</span>
+            <div class="item-description">4 nigiri, 4 Sakura fritert, 4 Tempura Rull</div>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">25. Combo - 16 biter (SO, SK, M, H, E, SE, B)</span>
+            <span class="item-price">299 kr</span>
+            <div class="item-description">4 nigiri, 4 Hot Sakura, 4 Flambert Laks Maki, 4 California Fritert Maki</div>
+        </div>
+
+        <h2>Tillbehor</h2>
+        <div class="menu-item">
+            <span class="item-name">Chilimajones</span>
+            <span class="item-price">33 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Wasabi</span>
+            <span class="item-price">22 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Sweet chili</span>
+            <span class="item-price">33 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Teriyakisaus</span>
+            <span class="item-price">33 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Soyasaus</span>
+            <span class="item-price">33 kr</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Ingefær</span>
+            <span class="item-price">22 kr</span>
+        </div>
+
+        <h2>Allergenforklaring</h2>
+        <p>H - hvete | SO - Soyae | SK - Skalldyr | G - Gluten | M - Melk | B - Bløtdyr | F - Fisk | SE - Sesamfrø | N - Nøtter | E - Egg | S - Sitrus |</p>
+    </div>
+
+    <div class="note">
+        <p>Alle priser er i norske kroner. Allergener er angitt i parentes ved hvert produkt.</p>
+    </div>
+</body>
+</html>
