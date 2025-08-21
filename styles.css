@@ -1,106 +1,118 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f0f0f;
-  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0d0d0d;
+  color: #f5f5f5;
 }
 
 header {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  background-color: #111;
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.7);
 }
 
-header .logo {
-  width: 50px;
-  margin-right: 10px;
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #fff;
+}
+
+header p {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #aaa;
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
 }
 
-#word-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.word-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+  width: 100%;
+  max-width: 900px;
 }
 
 .word-card {
-  background: #222;
+  background: #1a1a1a;
+  border-radius: 12px;
   padding: 15px;
-  border-radius: 10px;
-  min-width: 120px;
   text-align: center;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.2s, background 0.2s;
 }
 
 .word-card:hover {
-  transform: scale(1.05);
-  background: #333;
-}
-
-#controls {
-  margin-top: 20px;
-}
-
-#controls button {
-  padding: 10px 15px;
-  margin-right: 10px;
   background: #222;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.2s;
+  transform: scale(1.05);
 }
 
-#controls button:hover {
-  background: #444;
+.word-nor {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4fc3f7;
+}
+
+.word-ru {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 5px;
 }
 
 /* Ассистент */
-#assistant {
+.assistant-window {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 250px;
-  background: #111;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #000;
+  width: 300px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.8);
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-#assistant-header {
-  background: #222;
-  padding: 10px;
+.assistant-header {
+  background: #4fc3f7;
+  color: #000;
   font-weight: bold;
-  cursor: grab;
+  padding: 10px;
+  text-align: center;
 }
 
-#assistant-body {
+.assistant-body {
   flex: 1;
   padding: 10px;
   overflow-y: auto;
+  font-size: 0.9rem;
 }
 
-#assistant-input {
+.assistant-footer {
+  display: flex;
+  border-top: 1px solid #333;
+}
+
+.assistant-footer input {
+  flex: 1;
   padding: 10px;
   border: none;
   outline: none;
-  width: calc(100% - 20px);
-  margin: 5px 10px;
-  border-radius: 5px;
+  background: #111;
+  color: #fff;
 }
 
-#assistant-send {
-  margin: 5px 10px 10px 10px;
-  padding: 5px;
-  background: #222;
+.assistant-footer button {
+  padding: 10px 15px;
   border: none;
+  background: #4fc3f7;
+  color: #000;
+  font-weight: bold;
   cursor: pointer;
-  border-radius: 5px;
 }
