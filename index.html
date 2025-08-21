@@ -1,271 +1,47 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casablanca Restaurant - Meny</title>
-    <style>
-        /* Основные стили Casablanca */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        
-        header {
-            background-color: #1a1a1a;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 10px 0;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-            padding: 5px 10px;
-            transition: all 0.3s ease;
-        }
-        
-        nav a:hover {
-            color: #c62828;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-        
-        .menu-section {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-            padding: 25px;
-            overflow: hidden;
-        }
-        
-        .menu-section h2 {
-            color: #c62828;
-            border-bottom: 2px solid #ef9a9a;
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
-        
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px dashed #eee;
-        }
-        
-        .item-name {
-            font-weight: bold;
-        }
-        
-        .item-price {
-            color: #c62828;
-            font-weight: bold;
-        }
-        
-        .item-description {
-            color: #666;
-            font-style: italic;
-            margin-left: 15px;
-            font-size: 0.9em;
-        }
-        
-        .allergens {
-            font-size: 0.8em;
-            color: #888;
-            margin-top: 5px;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        
-        th, td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        /* Адаптивность */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            nav a {
-                margin: 5px 0;
-            }
-            
-            .menu-item {
-                flex-direction: column;
-            }
-            
-            .item-price {
-                margin-top: 5px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norwegian Ultra Trainer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
-    <header>
-        <h1>Casablanca Restaurant</h1>
-    </header>
-    
-    <nav>
-        <a href="#sushi">Sushi</a>
-        <a href="#kebab">Kebab</a>
-        <a href="#drinks">Drikke</a>
-    </nav>
-    
-    <div class="container">
-        <!-- Секция Sushi -->
-        <div id="sushi" class="menu-section">
-            <h2>Meny-Sushi</h2>
-            
-            <h3>Nigiri (2 biter)</h3>
-            <div class="menu-item">
-                <div>
-                    <span class="item-name">1. Laks Nigiri</span>
-                    <span class="allergens"></span>
-                </div>
-                <span class="item-price">45 kr</span>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <span class="item-name">2. Ebi Nigiri</span>
-                    <span class="allergens"></span>
-                </div>
-                <span class="item-price">45 kr</span>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <span class="item-name">3. Flambert Laks Nigiri</span>
-                    <span class="allergens">(H, SK, M, E, G)</span>
-                </div>
-                <span class="item-price">55 kr</span>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <span class="item-name">4. Tempura Scampi Nigiri - 3 biter</span>
-                    <span class="allergens">(F, SO, E, M)</span>
-                </div>
-                <span class="item-price">130 kr</span>
-            </div>
-            
-            <h3>Sashimi</h3>
-            <div class="menu-item">
-                <div>
-                    <span class="item-name">5. Skinny Sashimi - 6 biter</span>
-                    <span class="allergens">(F)</span>
-                </div>
-                <span class="item-price">160 kr</span>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <span class="item-name">6. New Sashimi - 6 biter</span>
-                    <span class="allergens">(F, SO, SE)</span>
-                </div>
-                <span class="item-price">170 kr</span>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <span class="item-name">7. Japanese Sashimi Stor - 12 biter</span>
-                    <span class="allergens">(F, SO)</span>
-                </div>
-                <span class="item-price">220 kr</span>
-            </div>
-            
-            <!-- Продолжение Sushi меню ... -->
-            
-        </div>
-        
-        <!-- Секция Kebab -->
-        <div id="kebab" class="menu-section">
-            <h2>Meny-Kebab</h2>
-            
-            <h3>KEBAB</h3>
-            <div class="menu-item">
-                <div>
-                    <span class="item-name">Kebabrull med Biffkjött</span>
-                    <span class="item-description">Kinakål, tomat, rodlak, mais, chilisaus, dressing</span>
-                    <span class="allergens">(M-E)</span>
-                </div>
-                <span class="item-price">235 kr</span>
-            </div>
-            
-            <div class="menu-item">
-                <div>
-                    <span class="item-name">Kebabrull med Kyllingfilet</span>
-                    <span class="item-description">Kinakål, tomat, rodlak, mais, chilisaus, dressing</span>
-                    <span class="allergens">(M-E)</span>
-                </div>
-                <span class="item-price">220 kr</span>
-            </div>
-            
-            <!-- Продолжение Kebab меню ... -->
-            
-            <h3>HAMBURGER</h3>
-            <table>
-                <tr>
-                    <th></th>
-                    <th>Liten (100g)</th>
-                    <th>Stor (200g)</th>
-                </tr>
-                <tr>
-                    <td>ORGINAL</td>
-                    <td>170 kr</td>
-                    <td>200 kr</td>
-                </tr>
-                <tr>
-                    <td>OST/BACON</td>
-                    <td>189 kr</td>
-                    <td>230 kr</td>
-                </tr>
-                <!-- Остальные бургеры ... -->
-            </table>
-            
-            <!-- Другие разделы Kebab меню ... -->
-            
-        </div>
-        
-        <!-- Секция напитков -->
-        <div id="drinks" class="menu-section">
-            <h2>Drikke</h2>
-            
-            <h3>Varm Drikke</h3>
-            <div class="menu-item">
-                <span class="item-name">Cappuccino</span>
-                <span class="item-price">45 kr</span>
-            </div>
-            <!-- Остальные напитки ... -->
-            
-        </div>
-        
-        <!-- Аллергены -->
-        <div class="menu-section">
-            <h2>Allergenforklaring</h2>
-            <p>H - hvete | SO - Soyae | SK - Skalldyr | G - Gluten | M - Melk |
-            B - Bløtdyr | F - Fisk | SE - Sesamfrø | N - Nøtter | E - Egg | S - Sitrus |</p>
-        </div>
-    </div>
+  <header>
+    <img src="assets/logo.svg" alt="Logo" class="logo">
+    <h1>Norwegian Ultra Trainer</h1>
+  </header>
+
+  <main>
+    <section id="trainer-container">
+      <div id="word-cards"></div>
+      <div id="controls">
+        <button id="shuffle">Рандом слова</button>
+        <button id="test">Тест</button>
+        <button id="dictation">Диктант</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Ассистент -->
+  <div id="assistant">
+    <div id="assistant-header">Ассистент</div>
+    <div id="assistant-body"></div>
+    <input type="text" id="assistant-input" placeholder="Спроси меня..." />
+    <button id="assistant-send">Отправить</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Norwegian Ultra Trainer</p>
+  </footer>
+
+  <script src="utils.js"></script>
+  <script src="storage.js"></script>
+  <script src="data.js"></script>
+  <script src="tts.js"></script>
+  <script src="trainer.js"></script>
+  <script src="assistant.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
