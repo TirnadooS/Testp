@@ -1,47 +1,35 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Norwegian Ultra Trainer</title>
+  <title>Учитель норвежского</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
   <header>
-    <img src="assets/logo.svg" alt="Logo" class="logo">
-    <h1>Norwegian Ultra Trainer</h1>
+    <h1>Учитель норвежского 🇳🇴</h1>
+    <p>Более 1000 слов для изучения</p>
   </header>
 
   <main>
-    <section id="trainer-container">
-      <div id="word-cards"></div>
-      <div id="controls">
-        <button id="shuffle">Рандом слова</button>
-        <button id="test">Тест</button>
-        <button id="dictation">Диктант</button>
+    <section class="trainer">
+      <h2>Слова</h2>
+      <div id="word-list" class="word-list"></div>
+    </section>
+
+    <section class="assistant-window" id="assistant">
+      <div class="assistant-header">🤖 Ассистент</div>
+      <div class="assistant-body" id="assistant-body">
+        <p>Привет! Я помогу тебе выучить норвежский. Жми на слово, и я произнесу его.</p>
+      </div>
+      <div class="assistant-footer">
+        <input type="text" id="assistant-input" placeholder="Спроси меня...">
+        <button id="assistant-send">Отправить</button>
       </div>
     </section>
   </main>
 
-  <!-- Ассистент -->
-  <div id="assistant">
-    <div id="assistant-header">Ассистент</div>
-    <div id="assistant-body"></div>
-    <input type="text" id="assistant-input" placeholder="Спроси меня..." />
-    <button id="assistant-send">Отправить</button>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Norwegian Ultra Trainer</p>
-  </footer>
-
-  <script src="utils.js"></script>
-  <script src="storage.js"></script>
-  <script src="data.js"></script>
-  <script src="tts.js"></script>
-  <script src="trainer.js"></script>
-  <script src="assistant.js"></script>
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
