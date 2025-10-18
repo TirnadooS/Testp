@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Barber & Craft — Tromsø</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Быстрая подсказка для оптимизации шрифтов в продакшене: используйте локальные шрифты или subset -->
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <div class="brand-logo">BC</div>
+        <div class="brand-text">
+          <div class="brand-title">Barber & Craft</div>
+          <div class="brand-sub">Tromsø • Мужская парикмахерская</div>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <button id="burger" aria-label="Открыть меню" class="burger" aria-expanded="false">☰</button>
+        <ul class="nav-list" id="navList">
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#" id="openBookingBtn" class="btn small">Записаться</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Главный экран">
+    <div class="hero-media">
+      <!-- видео (зацикленное). Положите файл в assets/hero-video.mp4 -->
+      <video id="heroVideo" class="hero-video" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+        <source src="assets/hero-video.mp4" type="video/mp4">
+        <!-- fallback: nothing - poster будет показан -->
+      </video>
+      <!-- если autoplay заблокирован, скрипт заменит видео на poster -->
+    </div>
+
+    <div class="hero-overlay">
+      <h1 class="hero-title"><span>Barber</span> &nbsp;<span>Craft</span></h1>
+      <p class="hero-sub">Классические стрижки и бритьё. Точность, уют и профессионализм.</p>
+      <div class="hero-ctas">
+        <a href="#services" class="btn primary">Наши услуги</a>
+        <a href="#" id="heroBook" class="btn outline">Записаться</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- SERVICES -->
+    <section id="services" class="section services">
+      <h2 class="section-title">Услуги</h2>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon">✂</div>
+          <h3>Классическая стрижка</h3>
+          <p class="muted">Точная работа: ножницы + машинка. От 450 NOK.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">🪒</div>
+          <h3>Бритьё</h3>
+          <p class="muted">Горячие полотенца и прямой бритвенный инструмент. 650 NOK.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">🧴</div>
+          <h3>Груминг</h3>
+          <p class="muted">Укладка и уход для бороды. От 350 NOK.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
+      <h2 class="section-title">Галерея</h2>
+      <div class="gallery-grid">
+        <picture>
+          <source srcset="assets/gallery-1-1200.jpg 1200w, assets/gallery-1-800.jpg 800w" sizes="(max-width: 800px) 48vw, 25vw">
+          <img loading="lazy" alt="Пример стрижки 1" src="assets/gallery-1-800.jpg" class="gallery-item">
+        </picture>
+        <picture>
+          <source srcset="assets/gallery-2-1200.jpg 1200w, assets/gallery-2-800.jpg 800w" sizes="(max-width: 800px) 48vw, 25vw">
+          <img loading="lazy" alt="Пример стрижки 2" src="assets/gallery-2-800.jpg" class="gallery-item">
+        </picture>
+        <picture>
+          <source srcset="assets/gallery-3-1200.jpg 1200w, assets/gallery-3-800.jpg 800w" sizes="(max-width: 800px) 48vw, 25vw">
+          <img loading="lazy" alt="Пример стрижки 3" src="assets/gallery-3-800.jpg" class="gallery-item">
+        </picture>
+        <picture>
+          <source srcset="assets/gallery-4-1200.jpg 1200w, assets/gallery-4-800.jpg 800w" sizes="(max-width: 800px) 48vw, 25vw">
+          <img loading="lazy" alt="Пример стрижки 4" src="assets/gallery-4-800.jpg" class="gallery-item">
+        </picture>
+      </div>
+    </section>
+
+    <!-- ABOUT & VIDEO -->
+    <section id="about" class="section about-grid">
+      <div>
+        <h2 class="section-title">О салоне</h2>
+        <p class="muted">Barber & Craft — уютное пространство в центре Tromsø. Опытные барберы, премиальные средства и внимательное обслуживание.</p>
+
+        <ul class="info-list">
+          <li>Опытные мастера (5+ лет)</li>
+          <li>Премиальные средства по уходу</li>
+          <li>Быстрая онлайн-запись</li>
+        </ul>
+
+        <a href="#" id="openBookingBtn2" class="btn primary">Записаться</a>
+      </div>
+
+      <div class="about-video">
+        <video controls preload="metadata" poster="assets/hero-poster.jpg" style="width:100%; border-radius:12px;">
+          <source src="assets/hero-video.mp4" type="video/mp4">
+          Ваш браузер не поддерживает видео.
+        </video>
+      </div>
+    </section>
+
+    <!-- SIMPLE CONTACT / FOOTER -->
+    <footer class="footer">
+      <div>
+        <div class="brand-title">Barber & Craft</div>
+        <div class="muted">Storgata 12, Tromsø • <a href="tel:+4712345678">+47 12 34 56 78</a></div>
+      </div>
+      <div class="muted">© <span id="year"></span> Все права защищены</div>
+    </footer>
+  </main>
+
+  <!-- BOOKING MODAL -->
+  <div id="bookingModal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal">
+      <button id="closeModal" class="modal-close" aria-label="Закрыть">✕</button>
+      <h3>Записаться</h3>
+      <form id="bookingForm">
+        <label class="sr-only">Имя</label>
+        <input name="name" placeholder="Имя" required>
+        <label class="sr-only">Телефон</label>
+        <input name="phone" placeholder="+47 ..." required>
+        <div style="display:flex; gap:8px;">
+          <input type="date" name="date" required>
+          <input type="time" name="time" required>
+        </div>
+        <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:10px;">
+          <button type="button" class="btn" id="modalCancel">Отмена</button>
+          <button type="submit" class="btn primary">Подтвердить</button>
+        </div>
+        <div id="bookingMsg" class="muted" style="margin-top:8px; display:none"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
