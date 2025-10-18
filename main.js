@@ -1,81 +1,81 @@
-// basic interactions: burger, booking modal, hero autoplay fallback, booking form
-document.addEventListener('DOMContentLoaded', ()=>{
+// Main interactions: burger, modal, hero autoplay fallback, booking form (frontend demo)
+document.addEventListener('DOMContentLoaded', function () {
 
-  // YEAR
-  document.getElementById('year').textContent = new Date().getFullYear();
+  // Year
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // BURGER
+  // Burger menu (mobile)
   const burger = document.getElementById('burger');
   const navList = document.getElementById('navList');
-  if(burger){
-    burger.addEventListener('click', ()=>{
-      const open = burger.getAttribute('aria-expanded') === 'true';
-      burger.setAttribute('aria-expanded', String(!open));
-      navList.style.display = open ? '' : 'flex';
+  if (burger && navList) {
+    burger.addEventListener('click', function () {
+      const expanded = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!expanded));
+      navList.style.display = expanded ? '' : 'flex';
     });
   }
 
-  // MODAL HANDLING
+  // Modal open/close
   const bookingModal = document.getElementById('bookingModal');
-  const openBooking = document.querySelectorAll('#openBookingBtn, #openBookingBtn2, #heroBook, #openBookingBtn, #openBookingBtn2, #heroBook');
-  const modalCancel = document.getElementById('modalCancel');
-  const closeModalBtn = document.getElementById('closeModal');
+  const openBookingButtons = document.querySelectorAll('#openBooking, #heroBook');
+  const cancelBtn = document.getElementById('cancelBtn');
 
-  function openModal(){
+  function openModal() {
+    if (!bookingModal) return;
     bookingModal.style.display = 'flex';
-    bookingModal.setAttribute('aria-hidden','false');
+    bookingModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   }
-  function closeModal(){
+  function closeModal() {
+    if (!bookingModal) return;
     bookingModal.style.display = 'none';
-    bookingModal.setAttribute('aria-hidden','true');
+    bookingModal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   }
-  openBooking.forEach(btn=>{ if(btn) btn.addEventListener('click', (e)=>{ e.preventDefault(); openModal(); }); });
-  if(modalCancel) modalCancel.addEventListener('click', closeModal);
-  if(closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+  openBookingButtons.forEach(b => b && b.addEventListener('click', function (e) { e.preventDefault(); openModal(); }));
+  if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-  // Booking form (front-end demo)
+  // Booking form (frontend demo)
   const bookingForm = document.getElementById('bookingForm');
-  if(bookingForm){
-    bookingForm.addEventListener('submit', (e)=>{
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      const data = new FormData(bookingForm);
-      const name = data.get('name') || 'Клиент';
-      const date = data.get('date');
-      const time = data.get('time');
-      const messageEl = document.getElementById('bookingMsg');
-      messageEl.style.display = 'block';
-      messageEl.textContent = `Готово — ${name}, запись на ${date} в ${time} принята. Мы свяжемся для подтверждения.`;
-      setTimeout(()=>{
-        bookingForm.reset();
-      },1400);
-      // Здесь можно отправлять fetch() на сервер
+      const fd = new FormData(bookingForm);
+      const name = fd.get('name') || 'Клиент';
+      const date = fd.get('date') || '';
+      const time = fd.get('time') || '';
+      const msg = document.getElementById('bookingMsg');
+      if (msg) {
+        msg.style.display = 'block';
+        msg.textContent = `Готово — ${name}, запись на ${date} в ${time} принята. Мы свяжемся для подтверждения.`;
+      }
+      bookingForm.reset();
+      // TODO: отправить на сервер (fetch POST) или интеграцию с Google Calendar
     });
   }
 
-  // HERO VIDEO: fallback for devices/browsers where autoplay is blocked.
+  // HERO autoplay fallback
   const heroVideo = document.getElementById('heroVideo');
-  function ensureHeroPlayback(){
-    if(!heroVideo) return;
-    const playPromise = heroVideo.play();
-    if(playPromise !== undefined){
-      playPromise.catch(()=> {
-        // autoplay blocked -> hide video and use poster as background
-        heroVideo.style.display = 'none';
-        document.querySelector('.hero').style.backgroundImage = `url('${heroVideo.getAttribute('poster') || 'assets/hero-poster.jpg'}')`;
-        document.querySelector('.hero').style.backgroundSize = 'cover';
-        document.querySelector('.hero').style.backgroundPosition = 'center';
+  const poster = heroVideo ? heroVideo.getAttribute('poster') : null;
+  function ensureHeroPlayback() {
+    if (!heroVideo) return;
+    const p = heroVideo.play();
+    if (p !== undefined) {
+      p.then(() => {
+        heroVideo.style.display = 'block';
+      }).catch(() => {
+        // autoplay blocked -> hide video and set poster as background on .hero
+        const hero = document.querySelector('.hero');
+        if (hero) {
+          heroVideo.style.display = 'none';
+          hero.style.backgroundImage = `url('${poster || 'assets/hero-poster.jpg'}')`;
+          hero.style.backgroundSize = 'cover';
+          hero.style.backgroundPosition = 'center';
+        }
       });
     }
   }
   ensureHeroPlayback();
-
-  // Close modal/lightbox on ESC
-  document.addEventListener('keydown', (e)=>{
-    if(e.key === 'Escape'){
-      if(bookingModal.style.display === 'flex') closeModal();
-    }
-  });
-
 });
