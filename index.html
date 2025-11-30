@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relax Sound</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="data:application/manifest+json,{
+    \"name\":\"Relax Sound\",
+    \"short_name\":\"Relax\",
+    \"start_url\":\".\",
+    \"display\":\"standalone\",
+    \"background_color\":\"#000\",
+    \"theme_color\":\"#000\",
+    \"icons\":[{\"src\":\"https://tirnadoos.github.io/Testp/icon.png\",\"sizes\":\"192x192\",\"type\":\"image/png\"}]
+  }">
+</head>
+<body>
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="rain.mp4" type="video/mp4">
+  </video>
+
+  <div class="container">
+    <h1>Relax Sound</h1>
+    
+    <div class="tabs">
+      <button class="tab active" data-tab="all">Все звуки</button>
+      <button class="tab" data-tab="nature">Природа</button>
+      <button class="tab" data-tab="tones">Тоны</button>
+      <button class="tab" data-tab="noise">Шумы</button>
+    </div>
+
+    <div class="mixer" id="mixer"></div>
+
+    <div class="bottom-bar">
+      <button id="random">Random</button>
+      <button id="timer">Timer</button>
+      <button id="save">Save</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
