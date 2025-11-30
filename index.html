@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relax Sound</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="https://cdn.coverr.co/videos/coverr-rain-on-window-6879/1080p.mp4" type="video/mp4">
+  </video>
+
+  <div class="container">
+    <h1>Relax Sound</h1>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="yoga">Йога</button>
+      <button class="tab" data-tab="meditation">Медитация</button>
+      <button class="tab" data-tab="sleep">Сон</button>
+    </div>
+
+    <div class="mixer" id="mixer"></div>
+
+    <div class="controls">
+      <button id="random">Случайный микс</button>
+      <button id="timer">Таймер</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
